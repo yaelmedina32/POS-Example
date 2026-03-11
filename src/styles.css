@@ -1,0 +1,175 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+:root {
+  --primary-color: #1a1a1a; /* Grayish Black */
+  --secondary-color: #FFD700; /* Yellow */
+  --accent-color: #FF4500; /* Red */
+  --text-color: #e0e0e0;
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --input-bg: #2c2c2c;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dark-theme {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Material Overrides for Dark Mode */
+.mat-typography,
+.mat-mdc-typography,
+.mat-app-background {
+  color: var(--text-color);
+}
+
+html,
+body {
+  color-scheme: dark;
+}
+
+.mat-mdc-toolbar,
+.mat-toolbar {
+  background-color: var(--primary-color) !important;
+  color: var(--text-color) !important;
+}
+
+.mat-mdc-icon-button,
+.mat-mdc-icon-button .mat-icon {
+  color: var(--secondary-color);
+}
+
+.mat-mdc-card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  box-shadow: 0 4px 6px var(--shadow-color) !important;
+  border: 1px solid #333;
+}
+
+.mat-mdc-card-title {
+  color: var(--secondary-color) !important;
+}
+
+.mat-mdc-card-subtitle,
+.mat-mdc-card-content {
+  color: var(--text-color) !important;
+}
+
+.mat-mdc-form-field-flex {
+  background-color: var(--input-bg) !important;
+}
+
+.mat-mdc-text-field-wrapper {
+  background-color: var(--input-bg) !important; 
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled),
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+  background-color: var(--input-bg) !important;
+}
+
+.mat-mdc-form-field .mdc-floating-label,
+.mat-mdc-form-field .mat-mdc-floating-label {
+  color: rgba(224, 224, 224, 0.8) !important;
+}
+
+.mat-mdc-input-element,
+.mdc-text-field__input,
+.mat-mdc-form-field-input-control {
+  color: var(--text-color) !important;
+  caret-color: var(--secondary-color) !important;
+}
+
+.mat-mdc-input-element::placeholder,
+.mdc-text-field__input::placeholder {
+  color: rgba(224, 224, 224, 0.6) !important;
+  opacity: 1;
+}
+
+.mat-mdc-form-field .mdc-line-ripple::before {
+  border-bottom-color: rgba(224, 224, 224, 0.35) !important;
+}
+
+.mat-mdc-form-field .mdc-line-ripple::after {
+  border-bottom-color: var(--secondary-color) !important;
+}
+
+.mat-mdc-form-field-error,
+.mat-mdc-form-field-hint {
+  color: rgba(224, 224, 224, 0.75) !important;
+}
+
+.mat-mdc-form-field.mat-form-field-invalid .mat-mdc-form-field-error {
+  color: var(--accent-color) !important;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: var(--secondary-color);
+  --mdc-protected-button-label-text-color: var(--primary-color);
+}
+
+.mat-mdc-raised-button.mat-accent {
+  --mdc-protected-button-container-color: var(--accent-color);
+  --mdc-protected-button-label-text-color: white;
+}
+
+.mat-mdc-table,
+.mat-mdc-paginator {
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+}
+
+.mat-mdc-header-cell {
+  color: var(--secondary-color) !important;
+}
+
+.mat-mdc-cell {
+  color: var(--text-color) !important;
+  border-bottom-color: #333 !important;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Custom Utilities */
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow-box {
+  box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+  border-radius: 0.5rem;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
